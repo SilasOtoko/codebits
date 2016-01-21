@@ -1,0 +1,55 @@
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <ul class="social-links list-unstyled">
+            <li class="social-link"><a class="social-link white-link" href="https://www.facebook.com/Lee-Brothers-Paint-111579572238983/" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+            <li class="social-link"><a class="social-link white-link" href="#" target="_blank"><i class="fa fa-youtube-square fa-2x"></i></a></li>
+            <li class="social-link"><a class="social-link white-link" href="https://plus.google.com/+LeeCarpetCleaningWarsaw/about" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+          </ul>
+          <a class="designed" href="http://wacdmedia.net" target="_blank">Designed by WACD Media</a>
+        </div>
+        <div class="row text-center bottom-spacing" id="footer-info">
+          <div class="col-xs-6 col-sm-4">
+            <h4 class="white-font serif">Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="https://goo.gl/maps/Cgc3diz6dbJ2" target="_blank">527 E Winona Ave</a></li>
+              <li><a href="https://goo.gl/maps/Cgc3diz6dbJ2" target="_blank">Warsaw, IN 46580</a></li>
+              <li><a href="tel:574-269-3033" target="_blank">574-269-3033</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-sm-4">
+            <h4 class="white-font serif">Links</h4>
+
+             <?php 
+
+              $defaults = array(
+                'container' => false,
+                'div' => false,
+                'theme_location' => 'footer-menu',
+                'menu_class' => 'list-unstyled',
+              );
+
+              wp_nav_menu( $defaults );
+
+            ?>
+
+          </div>
+          <div class="col-xs-6 col-sm-4">
+            <h4 class="white-font serif">Hours</h4>
+            <ul class="list-unstyled">
+              <li>Mon-Fri 8am - 5pm</li>
+              <li>Sat 8am - 1pm</li>
+              <li>Sun Closed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row text-center">
+          <p>&copy; 2015 Lee Brothers Paint</p>
+        </div>
+      </div>
+    </footer>
+
+    <?php wp_footer(); ?>
+
+  </body>
+</html>

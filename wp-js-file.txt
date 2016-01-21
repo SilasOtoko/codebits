@@ -1,0 +1,70 @@
+jQuery(document).ready(function($){
+  function filterPath(string) {
+  return string
+    .replace(/^\//,'')
+    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+    .replace(/\/$/,'');
+  }
+  var locationPath = filterPath(location.pathname);
+  var scrollElem = scrollableElement('html', 'body');
+ 
+  $('a[href*=#]:not(.scroll-ignore)').each(function() {
+    var thisPath = filterPath(this.pathname) || locationPath;
+    if (  locationPath == thisPath
+    && (location.hostname == this.hostname || !this.hostname)
+    && this.hash.replace(/#/,'') ) {
+      var $target = $(this.hash), target = this.hash;
+      if (target) {
+        var targetOffset = $target.offset().top;
+        $(this).click(function(event) {
+          event.preventDefault();
+          $(scrollElem).animate({scrollTop: targetOffset}, 1000, function() {
+            location.hash = target;
+          });
+        });
+      }
+    }
+  });
+ 
+  // use the first element that is "scrollable"
+  function scrollableElement(els) {
+    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+      var el = arguments[i],
+          $scrollElement = $(el);
+      if ($scrollElement.scrollTop()> 0) {
+        return el;
+      } else {
+        $scrollElement.scrollTop(1);
+        var isScrollable = $scrollElement.scrollTop()> 0;
+        $scrollElement.scrollTop(0);
+        if (isScrollable) {
+          return el;
+        }
+      }
+    }
+    return [];
+  }
+  $('a.dropdown-toggle').click(function(){
+    $('a.dropdown-toggle').attr('data-toggle', 'dropdown');
+  });
+  if(navigator.userAgent.match(/Trident\/7\./)) { // if IE
+    $('body').on("mousewheel", function () {
+        // remove default behavior
+        event.preventDefault(); 
+
+        //scroll without smoothing
+        var wheelDelta = event.wheelDelta;
+        var currentScrollPosition = window.pageYOffset;
+        window.scrollTo(0, currentScrollPosition - wheelDelta);
+    });
+  }
+  $("ul.sub-menu").parent().addClass("dropdown");
+  $("ul.sub-menu").addClass("dropdown-menu");
+  $("ul#main-menu li.dropdown a").addClass("dropdown-toggle");
+  $("ul.sub-menu li a").removeClass("dropdown-toggle"); 
+  $('.navbar .dropdown-toggle').append('<i class="caret"></i>');
+  $('a.dropdown-toggle').attr('data-toggle', 'dropdown');
+  $('.maps').click(function () {
+    $('.maps iframe').css("pointer-events", "auto");
+  });
+});

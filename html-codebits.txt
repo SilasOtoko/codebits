@@ -1,0 +1,358 @@
+<form id="contact-form">
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Name">
+    </div>
+    <br/>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="Email">
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control" id="phone" placeholder="Phone">
+    </div>
+    <br/>
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <input type="text" class="form-control" id="subject" placeholder="Subject">
+    </div>
+    <br/>
+  </div>
+  <div class="col-xs-12">
+    <div class="form-group">
+      <label for="text-area">Your Message</label>
+      <textarea id="text-area" class="form-control" rows="5"></textarea>
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-green">Send</button>
+  </div>
+</form>
+
+<header>
+  <nav class="navbar navbar-default" id="navigation">
+    <div class="container-fluid">
+      <ul class="nav desktop-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div id="logo-square">
+        <a href="index.html"><img src="img/CenterTitleLogo.svg" id="logo" alt="Center Title Logo"></a>
+      </div>
+      <div id="mobile-logo">
+        <a href="index.html"><img src="img/CenterTitleLogo.svg" alt="Center Title Logo"></a>
+      </div>
+      <ul class="nav desktop-nav">
+        <li><a href="place-order.html">Place Order</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+      <div class="navbar-header">
+        <button type="button" id="navbar-toggle" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navigation-collapse">
+        <ul class="nav navbar-nav mobile-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="place-order.html">Place Order</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="banner">
+    <div id="banner-overlay">
+      <div class="container">
+        <div id="banner-content" class="text-center">
+          <h1 id="banner-title">Center Title Services</h1>
+          <h2>Providing dependable title insurance and closing services in Northern Indiana since 1990</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<form>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default" id="required-panel">
+      <a class="scroll-ignore" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="required-heading">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+              Submitted By:
+          </h4>
+          <i class="caret pull-right"></i>
+        </div>
+      </a>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" class="form-control" placeholder="Company" id="company">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone *</label>
+              <input type="text" class="form-control" id="phone" placeholder="Phone">
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <em><strong>* Required Field</strong></em>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="unrequired-heading scroll-ignore">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            Type of Transaction:
+          </h4>
+          <i class="caret pull-right"></i>
+        </div>
+      </a>
+      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+          <div class="col-xs-12 col-sm-6 bottom-spacing">
+            <div class="form-group">
+              <label for="sel1">Type:</label>
+              <select class="form-control" id="sel1">
+                <option>Purchase</option>
+                <option>Cash</option>
+                <option>Refinance</option>
+                <option>Search</option>
+              </select>
+            </div>
+            <br/>
+            <div class="form-group">
+              <label for="sale-amount">Sale Price</label>
+              <input type="text" class="form-control" placeholder="Amount" id="sale-amount">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+              <label for="property-address">Property Address</label>
+              <input type="text" class="form-control" placeholder="Property Address" id="property-address">
+            </div>
+            <br/>
+            <h4>Is Center title to close the transaction?</h4>
+            <div class="checkbox-inline">
+              <label>
+                <input type="checkbox"> Yes
+              </label>
+            </div>
+            <div class="checkbox-inline">
+              <label>
+                <input type="checkbox"> No
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="unrequired-heading scroll-ignore">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            Lender:
+          </h4>
+          <i class="caret pull-right"></i>
+        </div>
+      </a>
+      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">
+          <div class="col-sm-6 bottom-spacing">
+            <div class="form-group">
+              <label for="lender-name">Name</label>
+              <input type="text" class="form-control" id="lender-name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="lender-email">Email</label>
+              <input type="email" class="form-control" id="lender-email" placeholder="Email">
+            </div>
+          </div>
+          <div class="col-sm-6 bottom-spacing">
+            <div class="form-group">
+              <label for="lender-contact-person">Lender Contact Person</label>
+              <input type="text" class="form-control" placeholder="Lender Contact" id="lender-contact-person">
+            </div>
+            <div class="form-group">
+              <label for="lender-phone">Phone</label>
+              <input type="text" class="form-control" id="lender-phone" placeholder="Phone">
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label for="lender-loan-amount">Loan Amount</label>
+              <input type="text" class="form-control" id="lender-loan-amount" placeholder="Loan Amount">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="unrequired-heading scroll-ignore">
+        <div class="panel-heading" role="tab" id="headingFour">
+          <h4 class="panel-title">
+            Buyer and/or Borrower:
+          </h4>
+          <i class="caret pull-right"></i>
+        </div>
+      </a>
+      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+        <div class="panel-body">
+          <div class="col-sm-6 bottom-spacing">
+            <div class="form-group">
+              <label for="buyer-name">Name</label>
+              <input type="text" class="form-control" id="buyer-name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="buyer-email">Email</label>
+              <input type="email" class="form-control" id="buyer-email" placeholder="Email">
+            </div>
+          </div>
+          <div class="col-sm-6 bottom-spacing">
+            <div class="form-group">
+              <label for="buyer-address">Address</label>
+              <input type="text" class="form-control" placeholder="Address" id="buyer-address">
+            </div>
+            <div class="form-group">
+              <label for="buyer-phone">Phone</label>
+              <input type="text" class="form-control" id="buyer-phone" placeholder="Phone">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive" class="unrequired-heading scroll-ignore">
+        <div class="panel-heading" role="tab" id="headingFive">
+          <h4 class="panel-title">
+            Seller:
+          </h4>
+          <i class="caret pull-right"></i>
+        </div>
+      </a>
+      <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+        <div class="panel-body">
+          <div class="col-sm-6 bottom-spacing">
+            <div class="form-group">
+              <label for="seller-name">Name</label>
+              <input type="text" class="form-control" id="seller-name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="seller-email">Email</label>
+              <input type="email" class="form-control" id="seller-email" placeholder="Email">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="seller-address">Address</label>
+              <input type="text" class="form-control" placeholder="Address" id="seller-address">
+            </div>
+            <div class="form-group">
+              <label for="seller-phone">Phone</label>
+              <input type="password" class="form-control" id="seller-phone" placeholder="Phone">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix" class="unrequired-heading scroll-ignore">
+        <div class="panel-heading" role="tab" id="headingSix">
+          <h4 class="panel-title">
+            Additional Information:
+          </h4>
+          <i class="caret pull-right"></i>
+        </div>
+      </a>
+      <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+        <div class="panel-body">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <textarea id="text-area" class="form-control" rows="5" placeholder="Additional Information you would like to add..."></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 text-center">
+    <button type="submit" class="btn btn-green">Send</button>
+  </div>
+</form>
+
+
+//Wise Insurance Header
+
+<header>
+  <div id="background-overlay">
+    <nav class="navbar navbar-default" id="navigation">
+      <div class="container-fluid">
+        <ul class="list-unstyled" id="social-links">
+          <li><a href="https://www.facebook.com/Wise-Insurance-Agency-280489678679111/?fref=ts"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UC-oRYukxBEXDeoL-_Cp25Fg"><i class="fa fa-youtube-square fa-2x"></i></a></li>
+          <li><a href="https://instagram.com/wise_insurance_agency/"><i class="fa fa-instagram fa-2x"></i></a></li>
+          <li><a href="https://plus.google.com/117489822141036619890/posts"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+        </ul>
+        <div class="navbar-header">
+              <button type="button" id="navbar-toggle" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span id="icon-bar" class="icon-bar"></span>
+                <span id="icon-bar" class="icon-bar"></span>
+                <span id="icon-bar" class="icon-bar"></span>
+              </button>
+              <a href="index.html"><img src="img/Wiselogo.png" id="logo"></a>
+          </div>
+        <div class="collapse navbar-collapse" id="navigation-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="quote.html">Get a Quote</a></li>
+                <li><a href="carriers.html">Carriers</a></li>
+                <li><a href="insuranceproducts.html">Insurance Products</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="meet-the-team.html">Meet the Team</a></li>
+                <li><a href="culture-and-values.html">Culture & Values</a></li>
+                <li><a href="affiliates.html">Affiliates</a></li>
+              </ul>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="banner">
+      <div id="banner-content" class="text-center">
+        <h1 id="title">Your Time Is Valuable</h1>
+        <h2 id="banner-message" class="bottom-spacing">We make every second count</h2>
+        <a href="quote.html" class="call-to-action-btn">Get A Quote</a>
+        <a href="#welcome-message" class="call-to-action-btn">Find Out More</a>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,44 @@
+<?php
+  /*
+    Template Name: Contact
+  */
+?>
+
+<?php get_header(); ?>
+
+<div id="main-content" class="top-box-shadow" itemscope itemtype="http://schema.org/LocalBusiness">
+  <div class="container" id="content-wrapper-shadow">
+    <div class="row">
+      <div class="col-xs-12 white-box">
+        <h1 class="title-indent bottom-spacing text-center serif mobile-heading-size">Send us an Email</h1>
+      </div>
+      <div class="col-xs-12 white-box">
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+          <?php the_content(); ?>
+
+        <?php endwhile; else : ?>
+
+          <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+
+        <?php endif; ?>
+      </div>
+    </div>
+    <div class="row white-box add-top-padding">
+      <div class="col-xs-12 col-sm-9 maps bottom-spacing-medium">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.372345421209!2d-85.8523228843006!3d41.23544656336294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88169e77937e5015%3A0x13e3da81ce81fc1a!2sLee+Carpet+Cleaning!5e0!3m2!1sen!2sus!4v1452869599789" allowfullscreen></iframe>
+      </div>
+      <div class="col-xs-12 col-sm-3 contact-info text-center bottom-spacing-medium" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <h3 class="no-top-margin serif">Address</h3>
+        <p class="medium-gray-font"><a class="medium-gray-link" href="https://goo.gl/maps/Cgc3diz6dbJ2"><span itemprop="streetAddress">527 E Winona Ave</span></a></p>
+        <p class="medium-gray-font"><a class="medium-gray-link" href="https://goo.gl/maps/Cgc3diz6dbJ2"><span itemprop="addressLocality">Warsaw</span>, <span itemprop="addressRegion">IN</span> <span itemprop="postalCode">46580</span></a></p>
+        <h3 class="serif">Phone</h3>
+        <p class="medium-gray-font">Office: <a href="tel:574-269-3033" class="medium-gray-link"><span itemprop="telephone">574-269-3033</span></a></p>
+        <h3 class="serif">Email</h3>
+        <p class="medium-gray-font"><span itemprop="email"></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php get_footer(); ?>

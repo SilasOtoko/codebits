@@ -1,0 +1,528 @@
+/*
+Theme Name: Lee Paint
+Author: WACD Media
+Author URI: http://wacdmedia.net
+Description: A theme built for Lee Paint
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+This is a private theme owned by WACD Media
+*/
+
+/* Wordpress */ 
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+.sticky{
+
+}
+
+.gallery-caption{
+
+}
+
+.bypostauthor{
+  
+}
+
+.wpcf7-submit{
+  margin-left: 35px;
+}
+
+.ajax-loader{
+  padding-right: 15px;
+}
+
+.maps iframe{
+  pointer-events: none;
+}
+
+.wpcf7-text, .wpcf7-textarea {
+  max-width: 100%;
+}
+
+#body .wpcf7-submit{
+  margin-left: 15px;
+}
+
+/* Universal ------------------------*/
+
+#body a,
+#body a:hover{
+  text-decoration: none;
+}
+
+#main-content{
+  padding: 40px 0 80px;
+}
+
+#main-content-heading{
+  box-shadow: 0 20px 4px -3px rgba(0,0,0,0.3);
+}
+
+.top-box-shadow{
+  box-shadow: inset 0 5px 10px 0 rgba(0,0,0,0.3)
+}
+
+#content-wrapper-shadow{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.bottom-spacing{
+  margin-bottom: 20px;
+}
+
+.bottom-spacing-medium{
+  margin-bottom: 40px;
+}
+
+.top-spacing{
+  margin-top: 20px;
+}
+
+.full-width-img{
+  height: auto;
+  width: 100%;
+}
+
+#logo{
+  width: 160px;
+}
+
+.icon{
+  width: 80px;
+}
+
+.inline{
+  display: inline-block;
+}
+
+.section-header{
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.white-box-header{
+  padding: 10px 15px 0;
+}
+
+.white-box{
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.bottom-margin-0{
+  margin-bottom: 0;
+}
+
+.push-right{
+  margin-right: 15px;
+}
+
+.no-top-margin{
+  margin-top: 0;
+}
+
+.add-top-padding{
+  padding-top: 40px;
+}
+
+
+/* Colors ------------------------*/
+
+#body{
+  background-color: #333;
+}
+
+#main-content{
+  background-color: #f5f5f5;
+}
+
+.white-background,
+.white-box,
+.white-box-header{
+  background-color: white;
+  border: 2px solid #f5f5f5;
+}
+
+.section-header{
+  border-top: 8px solid #666;
+}
+
+.dark-gray-button,
+.dark-gray-button:visited{
+  background-color: #333;
+  color: white;
+}
+
+.dark-gray-button:hover,
+.blue-button:hover{
+  background-color: #ccc;
+  color: #333;
+}
+
+.blue-button,
+.blue-button:visited{
+  background-color: #1d76c8;
+  color: white;
+}
+
+.medium-gray-font,
+.medium-gray-link{
+  color: #666;
+}
+
+.blue-link{
+  color: #1d76c8;
+}
+
+#blue-bar{
+  background-color: #1d76c8;
+}
+
+.medium-gray-link:hover{
+  color: #333;
+}
+
+.white-font{
+  color: white;
+}
+
+#footer a,
+#footer p,
+#footer li{
+  color: #ccc;
+}
+
+#footer a:hover{
+  color: white;
+}
+
+#navigation,
+.inner-coupon-block-top-bottom,
+.inner-coupon-block-left-right{
+  background-color: white;
+}
+
+#body .square-bullets > li:before{
+  background-color: #666;
+}
+
+
+/* Buttons ------------------------*/
+
+.icon-button-combo{
+  padding: 60px 0;
+}
+
+.dark-gray-button,
+.dark-gray-button:visited,
+.blue-button,
+.blue-button:visited{
+  border: none;
+  display: inline-block;
+  font-size: 18px;
+  padding: 10px 32px;
+}
+
+.blue-button,
+.blue-button:visited{
+  padding: 10px 20px;
+}
+
+
+
+/* Text ------------------------*/
+
+#body{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#body p{
+  font-size: 16px;
+}
+
+#body .serif{
+  font-family: 'Merriweather', serif;
+}
+
+.header-letter-spacing{
+  letter-spacing: 2px;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+
+
+/* Navigation ------------------------*/
+
+#navigation{
+  border: 0;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+  border-radius: 0;
+}
+
+#blue-bar{
+  padding: 5px 0;
+}
+
+#navigation-collapse{
+  padding-top: 30px;
+  text-align: center;
+}
+
+#navigation-collapse a{
+  font-size: 1.25em;
+}
+
+
+/* Home Page ------------------------*/
+
+#banner{
+  background: url("img/color-display-min.jpg") no-repeat top;
+  background-size: cover;
+  height: 80vh;
+  box-shadow:inset 0 20px 40px 2px rgba(25, 25, 25, .5), inset 0 -20px 40px 2px rgba(25, 25, 25, .5);
+}
+
+#company-values{
+  padding: 60px 0 80px;
+}
+
+.coupon-logo{
+  width: 160px;
+}
+
+.coupon{
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid #333;
+}
+
+.inner-coupon-block-top-bottom{
+  margin: -23px 0;
+  padding: 20px;
+}
+
+.inner-coupon-block-left-right{
+  margin: 0 -43px;
+}
+
+
+/* Products Page ------------------------*/
+
+#product-header{
+  padding: 40px 0 60px;
+}
+
+#product-title:before{
+  content: url('img/paint-roller.svg');
+  width: 80px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#main-content ul{
+  padding-left: 0;
+}
+
+.square-bullets{
+  margin-bottom: 0;
+}
+
+.square-bullets > li{
+  list-style: none;
+}
+
+#body .square-bullets > li:before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-left: -15px;
+  margin-right: 10px;
+}
+
+
+/* Contact Page ------------------------*/
+
+.map{
+  height: 300px;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.maps iframe{
+  pointer-events: none;
+  border: 0;
+}
+
+
+/* Footer ------------------------*/
+
+#footer{
+  padding: 40px 0 20px;
+}
+
+#footer-info{
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  padding: 20px 0;
+}
+
+.social-links{
+  float: left;
+  display: inline-block;
+}
+
+.social-link{
+  display: inline-block;
+  padding: 5px 5px;
+}
+
+.designed{
+  float: right;
+  padding: 10px 5px;
+}
+
+
+/* Responsive ------------------------*/
+
+@media (max-width: 767px){
+  #logo{
+    width: 100px;
+  }
+
+  #main-content{
+    background-color: white;
+    padding: 0;
+  }
+
+  #main-content-heading > .container-fluid > h1{
+    font-size: 1.25em;
+  }
+
+  #content-wrapper-shadow{
+    box-shadow: 0;
+  }
+
+  .mobile-heading-size,
+   .blog-title{
+    font-size: 1.75em;
+  }
+
+  #navigation-collapse{
+    border: none;
+  }
+}

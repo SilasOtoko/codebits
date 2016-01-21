@@ -1,0 +1,135 @@
+<?php get_header(); ?>
+
+<div id="banner">
+  <div id="banner-overlay">
+  </div>
+</div>
+<div id="main-content-heading" class="text-center">
+  <div class="container-fluid">
+    <h1 class="bold white-font header-letter-spacing">Welcome to Lee Brothers Paint</h1>
+  </div>
+</div>
+<div id="main-content">
+  <div class="container" id="content-wrapper-shadow">
+    <div class="row white-box">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center" id="company-values">
+        <img src="<?php bloginfo('template_directory'); ?>/img/brush.svg" class="icon bottom-spacing" alt="brush icon">
+        <h2 class="serif bottom-spacing mobile-heading-size">What We Are About</h2>
+        <p>Lee Brothers Paint provides the finest paints on the market, offering a broad spectrum of prices for anyone’s budget - including taking the lead in VOC free paints and VOC ‘friendly’ paints.  We do not carry any paint we haven’t tried and/or tested to make sure it does exactly what we say it will.  We stand behind our products 100%.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="white-box-header">
+        <h4 class="bold section-header medium-gray-font">COUPONS</h4>
+      </div>
+      <div class="gray-header-section clearfix"> 
+
+         <?php
+
+          $args = array(
+            'post_type' => 'coupon',
+            'posts_per_page' => 2
+          );
+          $query = new WP_Query( $args );
+
+        ?>
+
+        <?php $query->query_posts('showposts=2'); ?>
+        <?php if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post(); ?>
+
+          <div class="col-xs-12 col-sm-6 white-box">
+            <div class="coupon text-center">
+              <div class="inner-coupon-block-top-bottom">
+                <div class="inner-coupon-block-left-right">
+                  <img class="coupon-logo full-width-img bottom-spacing" src="<?php bloginfo('template_directory'); ?>/img/logo.jpg" alt="Lee Brothers Logo">
+
+                  <?php the_content(); ?>
+
+                  <h4><?php the_field('deal'); ?></h4>
+                  <h3 class="bottom-spacing"><?php the_field('sale_item'); ?></h3>
+                  <h5 class="bottom-margin-0"><?php the_field('disclaimer'); ?></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <?php endwhile; else : ?>
+
+          <div class="col-xs-12 white-box">
+              <div class="coupon text-center">
+                <div class="inner-coupon-block-top-bottom">
+                  <div class="inner-coupon-block-left-right">
+                    <img class="coupon-logo full-width-img bottom-spacing" src="<?php bloginfo('template_directory'); ?>/img/logo.jpg" alt="Lee Brothers Logo">
+
+                    <p class="bottom-margin-0"><?php _e( 'Sorry, there are no coupons posted at this time.' ); ?></p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        <?php endif; ?>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="white-box-header">
+        <h4 class="bold section-header medium-gray-font">OUR FEATURED BRAND</h4>
+      </div>
+      <div class="gray-header-section">
+        <div class="white-box clearfix">
+          <div class="col-xs-12 col-sm-6">
+            <img class="full-width-img" src="<?php bloginfo('template_directory'); ?>/img/benjamin-moore-paint-min.jpg" alt="Benjamin Moore Paint Can">
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <h2 class="serif mobile-heading-size">Benjamin Moore</h2>
+            <p>Benjamin Moore has been pushing the edge in color since 1883. They revolutionized the meaning of color and beauty in the home and have committed their careers to innovating the painting industry as we know it. Benjamin Moore committed themselves to actively pursue the inspiration of color. With one goal in mind, Moore Paint knows they have reached the perfect hue when you the customer exclaims, “That’s the color! That is it!” Then, they know they’ve reached perfection of color.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="white-box-header">
+        <h4 class="bold section-header medium-gray-font">BENJAMIN MOORE FEATURED PAINT</h4>
+      </div>
+      <div class="gray-header-section clearfix"> 
+        <div class="col-xs-12 col-sm-6 white-box">
+          <img class="full-width-img" src="<?php bloginfo('template_directory'); ?>/img/regal-select-min.jpg" alt="Benjamin Moore Paint Can">
+          <h3 class="serif mobile-heading-size">Regal</h3>
+          <p>Regal Select offers the premium performance and smooth application you've come to expect from our classic paint, with the added benefits of cutting-edge new technologies. Thanks to our proprietary waterborne resins and zero VOC colorants, Regal Select is both a paint and primer in one advanced formula.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 white-box">
+          <img class="full-width-img" src="<?php bloginfo('template_directory'); ?>/img/aura-min.jpg" alt="Benjamin Moore Paint Can">
+          <h3 class="serif mobile-heading-size">Aura</h3>
+          <p>Covers like no other paint on the market. Thanks to their Color Lock technology, Aura Paint covers more completely and dries more quickly to an exceptionally durable and uniquely smooth finish. You get outstanding results and save time and money.</p>
+        </div>
+        <div class="col-xs-12 text-center white-box icon-button-combo">
+          <img src="<?php bloginfo('template_directory'); ?>/img/paint-roller.svg" class="icon" alt="paint roller icon">
+          <h4 class='bottom-spacing'>Want to see more product?</h4>
+          <a class="dark-gray-button" href="products">More</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="white-box-header">
+        <h4 class="bold section-header medium-gray-font">BENJAMIN MOORE ONLINE TOOLS</h4>
+      </div>
+      <div class="col-xs-12 col-sm-6 text-center white-box icon-button-combo">
+        <img src="<?php bloginfo('template_directory'); ?>/img/calculator.svg" class="icon" alt="calculator icon">
+        <h4 class='bottom-spacing'>Paint Calculator</h4>
+        <a class="dark-gray-button" href="http://www.benjaminmoore.com/en-us/for-your-home/paint-calculator" target="_blank">Try It</a>
+      </div>
+      <div class="col-xs-12 col-sm-6 text-center white-box icon-button-combo">
+        <img src="<?php bloginfo('template_directory'); ?>/img/color-sampler.svg" class="icon" alt="color sampler icon">
+        <h4 class='bottom-spacing'>Color Sampler</h4>
+        <a class="dark-gray-button" href="http://www.benjaminmoore.com/en-us/for-contractors/personal-color-viewer" target="_blank">Try It</a>
+      </div>
+      <div class="col-xs-12 text-center text-center white-box icon-button-combo">
+        <h3 class='bottom-spacing'>Learn how to fix common paint problems!</h3>
+        <a class="dark-gray-button" href="http://www.benjaminmoore.com/en-us/for-contractors/interior-paint-problem-solver" target="_blank">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php get_footer(); ?>
